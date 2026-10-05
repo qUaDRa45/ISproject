@@ -1,0 +1,22 @@
+@startuml
+skinparam linetype ortho
+
+entity "events" {
+  * id : INTEGER <<PK>>
+  --
+  title : VARCHAR <<not null>>
+  description : TEXT
+  event_time : TIMESTAMP <<not null>>
+  max_slots : INTEGER <<default 10>>
+}
+
+entity "bookings" {
+  * id : INTEGER <<PK>>
+  --
+  event_id : INTEGER <<FK>>
+  client_name : VARCHAR <<not null>>
+  client_email : VARCHAR <<not null>>
+}
+
+events ||--o{ bookings : "1 to many"
+@enduml

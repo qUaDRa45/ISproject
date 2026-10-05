@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Клиент (User)" as Client
+actor "Администратор (Admin)" as Admin
+
+rectangle "Информационная система записи (EventBook)" {
+  together {
+    component "Web API & Backend\n(FastAPI / Python)" as Backend
+    database "База данных\n(SQLite / PostgreSQL)" as Database
+  }
+}
+
+Client --> Backend : Просмотр событий, создание записи (HTTP)
+Admin --> Backend : Управление расписанием (HTTP)
+Backend --> Database : Чтение / Запись данных (SQL)
+@enduml
