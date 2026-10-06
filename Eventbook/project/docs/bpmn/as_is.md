@@ -1,18 +1,20 @@
-@startuml
-skinparam defaultTextAlignment center
-autonumber
+# Схема текущего процесса (As-Is)
 
-actor "Клиент" as Client
-participant "Администратор / \nСпециалист" as Admin
-database "Блокнот / \nExcel-таблица" as Excel
+Ниже представлена диаграмма последовательности, отражающая текущий процесс записи вручную через мессенджеры и табличные редакторы.
 
-== Текущий процесс записи (As-Is) ==
-Client -> Admin: Пишет в мессенджер / звонит с запросом на консультацию
-Admin -> Excel: Проверяет свободное время вручную (риск ошибок и накладок)
-alt Время занято
-    Admin --> Client: Сообщает об ошибке, предлагает другое время
-    Client -> Admin: Выбирает новое время
-end
-Admin -> Excel: Записывает данные клиента вручную
-Admin --> Client: Подтверждает запись текстовым сообщением
-@enduml
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Client as Клиент
+    participant Admin as Администратор / Специалист
+    participant Excel as Блокнот / Excel-таблица
+    
+    Note over Client, Excel: Текущий процесс записи (As-Is)
+    Client->>Admin: Пишет в мессенджер / звонит с запросом
+    Admin->>Excel: Проверяет свободное время вручную (риск ошибок)
+    alt Время занято
+        Admin-->>Client: Сообщает об ошибке, предлагает другое время
+        Client->>Admin: Выбирает новое время
+    end
+    Admin->>Excel: Записывает данные клиента вручную
+    Admin-->>Client: Подтверждает запись сообщением
