@@ -9,7 +9,7 @@
 * **Трекер задач (GitHub Issues):** https://github.com/qUaDRa45/ISproject/issues
 
 ## Технологический стек
-* **Backend:** Python 3.11, FastAPI, SQLAlchemy
+* **Backend:** Python 3.11, FastAPI (Updated)
 * **Database:** SQLite / PostgreSQL
 * **Containerization:** Docker, Docker Compose
 
