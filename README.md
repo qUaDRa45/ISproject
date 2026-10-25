@@ -5,6 +5,9 @@
 ## Состав команды
 * **Студент** — Аналитик, Архитектор, Разработчик, Тестировщик, DevOps (Соло-проект).
 
+## Ссылки
+* **Трекер задач (GitHub Issues):** https://github.com/qUaDRa45/ISproject/issues
+
 ## Технологический стек
 * **Backend:** Python 3.11, FastAPI, SQLAlchemy
 * **Database:** SQLite / PostgreSQL
@@ -14,10 +17,13 @@
 
 ## Навигация по документации (/docs)
 
-Вся проектная документация разделена на следующие разделы:
+Вся проектная документация разложена по разделам в папке `docs/`:
+
+* **Модель ветвления:**
+  * [Правила работы с Git и ветками](docs/branching.md)
 * **Анализ процессов:**
-  * [Схема процесса As-Is](docs/bpmn/as_is.puml)
-  * [Схема процесса To-Be](docs/bpmn/to_be.puml)
+  * [Схема процесса As-Is](docs/bpmn/as_is.md)
+  * [Схема процесса To-Be](docs/bpmn/to_be.md)
 * **Требования:**
   * [Функциональные требования](docs/requirements/functional.md)
   * [Нефункциональные требования](docs/requirements/non_functional.md)
@@ -26,6 +32,8 @@
   * [ER-диаграмма базы данных](docs/data/er_diagram.puml)
 * **Архитектурные решения:**
   * [ADR 001: Выбор монолитной архитектуры и FastAPI](docs/adr/001_architecture_style.md)
+* **Релизы:**
+  * [Журнал изменений (Changelog)](docs/changelog.md)
 
 ---
 
